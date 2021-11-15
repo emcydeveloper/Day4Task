@@ -20,13 +20,19 @@ for (data in getAPIData) {
 
   let flagLink = getAPIData[data].flag;
   let countryName = getAPIData[data].name;
+  let region = getAPIData[data].region;
+  let subregion= getAPIData[data].subregion;
+  let population = getAPIData[data].population;
+
+
+//   region, sub region and population
 
 //   console.log(flagLink);
 let createImg = document.createElement("img");
 let createBreak = document.createElement("br");
 let createHeading = document.createElement("h3");
 createHeading.style.textAlign = "center";
-createHeading.style.marginBottom = "0";
+createHeading.style.marginBottom = "5px";
 
 createImg.setAttribute("src",flagLink);
 createImg.style.display= "block";
@@ -34,7 +40,7 @@ createImg.style.marginLeft = "auto";
 createImg.style.marginRight = "auto";
 createImg.style.width = "50%";
 
-createHeading.innerText = countryName;
+createHeading.innerText = (`${countryName} in Region:  ${region} and Subregion: ${subregion} with population of -  ${population}`);
 // display: block;
 //   margin-left: auto;
 //   margin-right: auto;
